@@ -1,13 +1,13 @@
-name: Hello world workflow
+name: Hello World Workflow
 
 on:
-    push: 
-        branches: 
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-    say-hello:
-        runs-on: ubuntu-latest 
-        steps:
-            - name: Print hello world program
-            run: echo "Hello, Github actions"
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hello, GitHub Actions!"
