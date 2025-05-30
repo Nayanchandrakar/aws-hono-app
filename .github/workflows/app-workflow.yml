@@ -10,8 +10,14 @@ on:
             - master
 
 jobs:
-    say-hello:
+    run-scripts:
         runs-on: ubuntu-latest
         steps:
-            - name: Print hello world
-              run: echo "Hello, Github actions"
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+            - name: Run a node js script
+              run: |
+                echo "Running a Node script"
+                node -e "console.log('Hello from Node.js!')"
