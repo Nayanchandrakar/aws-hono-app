@@ -19,4 +19,4 @@ jobs:
         - name: Run a node js script
           run: | 
             echo "Running a Node Script"
-            node -e "console.log("Hello world")"
+            node -e "console.log('Hello world')"
