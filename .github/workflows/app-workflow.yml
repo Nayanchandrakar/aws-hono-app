@@ -1,22 +1,19 @@
-name: Testing github actoins
+name: Testing application
 
-on: 
-    push:
-      branches: 
-        - master
-
-    pull_request: 
+on:
+   push: 
+    branches:
+      - master
+    
+    pull_request:
       branches:
         - master
 
-
 jobs:
-  run-scripts:
+  stay-update:
       runs-on: ubuntu-latest
-      steps: 
-        - name: Set up Node.js
+      steps:
+        - name: Setup node js
           uses: actions/setup-node@v4
-        - name: Run a node js script
-          run: | 
-            echo "Running a Node Script"
-            node -e "console.log('Hello world')"
+        - name: Run node js code
+          run: node -e "console.log('Hello world program')"
