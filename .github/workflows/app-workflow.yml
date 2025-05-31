@@ -1,23 +1,22 @@
-name: Hello world app
+name: Testing github actoins
 
-on:
+on: 
     push:
-        branches: 
-            - master
+      branches: 
+        - master
 
     pull_request: 
-        branches: 
-            - master
+      branches:
+        - master
+
 
 jobs:
-    run-scripts:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
-            - name: Set up Node.js
-              uses: actions/setup-node@v4
-            - name: Run a node js script
-              run: |
-                echo "Running a Node script"
-                node -e "console.log('Hello from Node.js!')"
+  run-scripts:
+      runs-on: ubuntu-latest
+      steps: 
+        - name: Set up Node.js
+          uses: actions/setup-node@v4
+        - name: Run a node js script
+          run: | 
+            echo "Running a Node Script"
+            node -e "console.log("Hello world")"
