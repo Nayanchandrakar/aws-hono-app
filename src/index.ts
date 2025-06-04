@@ -15,6 +15,13 @@ app.get("/health"  , (c) => {
   })
 })
 
+
+app.get("/db-health" , (c) => {
+  return c.json({
+    status: "Add database health check here."
+  })
+})
+
 serve({
   fetch: app.fetch,
   port: 3000
